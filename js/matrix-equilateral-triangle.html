@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Matrix Equilateral Triangle</title>
+	<style>
+		*{
+			box-sizing: border-box;
+			padding: 0;
+			margin:0;
+			border:0;
+		}
+
+		#container{
+			/*width: 1000px;*/
+		}
+		button{
+			padding: 5px;
+		}
+		.row{
+			display: flex;
+			height: 40px;
+			/*background-color: rgba(0,0,0,0.3);*/
+			padding: 3px;
+			margin: 0	/px;
+
+		}
+		.cell{
+			flex-grow: 1;
+			flex-basis: 20px;655555556ttttttttt
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 20px;
+			color: rgb(110 208 255);
+			background-color: #555555;
+			margin:1px;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		function printEqTriangle(n){
+			var noRows = n;
+			var noCols = n;
+			var row = null;
+			var cell = null;
+			var container = document.querySelector("#container");
+			var i, j, k;
+			var colMidPoint, startPoint, endPoint;
+			colMidPoint = ((noCols + 1) / 2) -1;
+			rowMidPoint = ((noRows + 1) / 2) -1;
+
+			for(i=0; i<noRows; i++){
+				row = document.createElement("div");
+				row.className = "row";
+				container.appendChild(row);
+				k =  rowMidPoint-i;
+
+				if(k<0){
+					k = k*-1;
+				}
+
+
+				//OLD FORMULA: startPoint = colMidPoint - k;
+				//OLD FORMULA: endPoint = colMidPoint + k;
+
+				startPoint = colMidPoint - (colMidPoint - k);
+				endPoint = colMidPoint + (colMidPoint - k);
+
+
+				for(j=0; j<noCols; j++){
+					cell = document.createElement("div");
+					cell.className = "cell";
+					console.log(startPoint +" : "+endPoint + "k:"+k);
+					if(j >= startPoint && j <= endPoint){
+						// console.log(j);
+						cell.innerText = "*";
+					}
+
+
+					
+					row.appendChild(cell);
+				}
+			}
+		}
+	</script>
+
+	<div id="container"></div>
+	<button onclick="printEqTriangle(21);">Add Rows & Cells</button>
+</body>
+</html>

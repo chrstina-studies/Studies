@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript Intro</title>
+	<style>
+		#container{
+			background-color: #CCCCCC;
+			min-height: 500px;
+			min-width: 500px;
+		}
+		div{
+			min-height: 30px; min-width: 30px; max-width: 30px;
+			background-color: red; margin:5px;
+			display: flex; 
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			justify-content: flex-start;
+			align-content: flex-start;
+		}
+	</style>
+	<script type="text/javascript">
+
+		function createDivs(){
+			var n = document.querySelector("#numberofdiv");
+			var c = document.querySelector("#colorofdiv").value;
+			var numberofdivs = n.value;
+			var container = document.querySelector("#container");
+			
+
+			for(var i=0; i<numberofdivs; i++){
+				var d = document.createElement("div");
+				d.style.backgroundColor = c;
+				container.append(d);
+			}
+			
+		}
+
+
+	</script>
+</head>
+<body>
+	<input type="text" value="10" id="numberofdiv">
+	<input type="text" value="red" id="colorofdiv">
+
+	<input id="mybutton" type="button" value="Create DIVs" onclick="createDivs()">
+
+	<div id='container' test-attr="christina">
+		
+	</div>
+</body>
+</html>

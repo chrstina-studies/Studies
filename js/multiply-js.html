@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+		*{
+			box-sizing: border-box;
+			margin: 0px;
+			padding: 0px;
+			border: 0px;
+		}
+
+		#container{
+			width: 500px;
+			height: 500px;
+			border: 2px solid black;
+		}
+		#container1{
+			height: 250px;
+			width: 250px;
+			border: 2px solid red;
+		}
+	</style>
+	<meta charset="UTF-8">
+	<title>Multiply</title>
+</head>
+<body>
+	<div id="container"></div>
+	<div id="container1"></div>
+	
+</body>
+  <script>
+var listA = [1,2,5,6,7];
+var listB = [5,3,4,5,6];          
+for(k = 0; k < listA.length; k++){
+	document.getElementById('container').innerHTML +=listA[k] + "*" + listB[k] + "=" + listA[k] * listB[k] + "<br>";
+	console.log(listA[k] * listB[k]);
+
+}
+var numbers = [1,2,3,4,5,6,7,8,9,10];
+for(i = 0; i < numbers.length; i++){
+	
+		// document.getElementById("container1").innerHTML = numbers ;
+	if(numbers[i] % 2 != 0){
+        document.getElementById("container1").innerHTML += numbers[i];
+	}
+}
+
+
+	</script>
+</html>

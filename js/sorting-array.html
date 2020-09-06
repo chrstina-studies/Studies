@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sorting-array</title>
+</head>
+
+<body>
+    <div id="container"></div>
+    <script>
+    var unsortedArray = [1, 4, 3, 9, 2, 8];
+    var sortedArray = [];
+    var smallestIndex = 0;
+    while(unsortedArray.length > 0) {
+    	if(unsortedArray.length>1){
+
+	        for (i = 0; i < unsortedArray.length - 1; i++) {
+	            smallestIndex = (unsortedArray[smallestIndex] < unsortedArray[i + 1]) ? smallestIndex : i + 1;
+
+	        }
+		}else{
+			smallestIndex = 1;
+		}
+		sortedArray.push(unsortedArray[smallestIndex]);
+	    unsortedArray.splice(smallestIndex, 1);
+	    alert(sortedArray);
+    }
+    console.log(unsortedArray[smallestIndex]);
+    </script>
+</body>
+
+</html>

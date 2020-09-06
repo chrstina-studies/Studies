@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calender</title>
+</head>
+<style>
+.container {
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-rows: 30px 1fr;
+    grid-template-columns: 1fr;
+    border: 1px solid black;
+}
+
+.c-header,
+.c-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.days {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sun,
+.sat {
+    color: red;
+}
+</style>
+
+<body>
+    <div class="calendar-holder">
+       
+    </div>
+
+
+
+    <!-- Hiding this template element -->
+     <div id="calendar-template" class="container" style="display: none;">
+            <div class="c-header">
+                <div class="days sun">Sun</div>
+                <div class="days">Mon</div>
+                <div class="days">Tue</div>
+                <div class="days">Wed</div>
+                <div class="days">Thu</div>
+                <div class="days">Fri</div>
+                <div class="days sat">Sat</div>
+            </div>
+            <div id="c-body" class="c-body">	
+            </div>
+        </div>
+    <script>
+    function duplicateSelf(id) {
+        var el = document.getElementById(id);
+        var duplicateEl = el.cloneNode(true);
+        duplicateEl.id = "";
+        duplicateEl.style.display = "";
+        return duplicateEl;
+    }
+
+    function printCalendar2020(month) {
+
+        var printMonth = month;
+        var weekDayPtrOfTheYear = 4;
+        var noDaysInEachMonth = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        var startDay = 0;
+        var totalDays = 0;
+        var noWeekDays = 7;
+
+        //cloning the calendar template inside the container
+        var duplicateTemplate = duplicateSelf("calendar-template");
+        var container = document.querySelector(".calendar-holder");
+        container.appendChild(duplicateTemplate);
+
+        for (var i = 0; i < printMonth; i++) {
+            totalDays += noDaysInEachMonth[i];
+        }
+        startDay = (totalDays) % noWeekDays;
+
+        var noDaysInAMonth = noDaysInEachMonth[printMonth];
+        var weekDayPtr = startDay;
+        var emptyDivs = weekDayPtr;
+        var div;
+
+        // adding empty divs
+        for (i = 0; i < weekDayPtr; i++) {
+            div = document.createElement('div');
+            div.style.border = "1px solid black";
+            duplicateTemplate.querySelector('.c-body').appendChild(div);
+        }
+
+        for (j = 1; j <= 31; j++) {
+            div = document.createElement('div');
+            div.innerHTML = j;
+            div.style.border = "1px solid black";
+            if (weekDayPtr == 0 || weekDayPtr == 6) {
+                div.style.color = "red";
+            }
+            duplicateTemplate.querySelector('.c-body').appendChild(div);
+            weekDayPtr += 1;
+            if (weekDayPtr > noWeekDays - 1) {
+                weekDayPtr = 0;
+            }
+        }
+    }
+    </script>
+</body>
+
+</html>

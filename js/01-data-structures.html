@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Data Structures</title>
+</head>
+
+<body>
+    <script>
+        function add(a,b){
+            alert(a + b)
+        }
+        
+    var firstName = "Christina"; //String
+    var age = 74; //Number
+    console.log("I'm " + firstName + " and I'm " + age + " years old.");
+    var isStudent; //Boolean
+    console.log(isStudent);
+    if (isStudent == null) {
+        console.log("I'm a student.")
+    }
+
+    console.log("end");
+
+    var colors = ["red", "yellow", "green", "blue"]; //String Array
+    var range = [35, 50, 80, 100]; // Number Array
+    console.log(colors.length);
+    console.log(colors[3]);
+    console.log(range[3]);
+
+
+    var person = {
+    				name: "Christina", 
+    				age: 14, 
+    				hobbies: ["basketball", "programming", "cooking", "baking", "painting", "gardening", "badminton", "cycling", "singing", "petting"],
+    				isStudent: true
+    			}
+    console.log(person);
+    console.log(person.name);
+    console.log(person.age);
+    console.log(person.hobbies[8]);
+
+
+    // Complex Data Stucture
+
+    var school = {
+    	name: "Sri Sankara",
+    	startedYear: "1990",
+    	studentsCount: 4000,
+    	teachers: [
+    				{name:"Radha Balaji", subject: "science", classTeacher: true, salary: 15000 }, 
+    				{name:"Santi Jayan", subject: "SST", classTeacher: true, salary: 15000 }, 
+    				{name:"N Vijalakshmi", subject: "Maths", classTeacher: false, salary: 15000 }, 
+    			    
+    			  ]
+    }
+
+    console.log("I've studied in "+school.name +"which has "+ school.studentsCount +" students.");
+    console.log("My fav teachers are "+ school.teachers[0].name+ ", "+ school.teachers[1].name+ ".");
+    console.log("Total salary of the teachers is "+(school.teachers[0].salary+school.teachers[1].salary+school.teachers[2].salary) + ".")
+
+    var family = {
+        name: "ChriShiJeNa",
+        place: "Tenkashi",
+        familyMoto: "Family where life begins and love never ends!",
+        familyMembers: [
+                    {name: "Shibu Alexis", age: 28, job: "Software Engeneer", value: "Father" },
+                    {name: "Jenie Alexis", age: 28, job: "Montoserri Teacher", value: "Mother" },
+                    {name: "T T Joseph", age: 73, job: "cook", value: "Grandfather" },
+                    {name: "Jolly Joseph", age: 65, job: "Housewiffe", value: "Grandmother" },
+                    {name: "Christina", age: 14, isStudent: true, value: "Elder sister" },
+                    {name: "Navina", age: 12, isStudent: true, value: "Younger sister" },
+        ]
+
+        
+        }
+
+        console.log("My family's name is "+ family.name +". "+ "We live in "+ family.place +"." );
+        console.log("Our family moto is"+"- "+ family.familyMoto + ".");
+
+        
+
+    
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style type="text/css">
+		* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+	</style>
+	<meta charset="UTF-8">
+	<title>test-js</title>
+</head>
+<body>
+	<div id="container" style="width: 50vw; height: 80vh; border: 1px solid blue;"></div>
+	
+</body>
+<script>
+	var numbers  = [1,2,3,4,5,6,9, 10,12,13];
+
+    for (var i = 200; i  <= 1000; i= i+ 100) {
+    	 document.getElementById("container").innerHTML += i + "<br> ";
+    }
+
+    var marks = [55,60,78,85,90,100];
+    var total = 0;
+     for (var i = 0; i  < marks.length; i++) {
+         total = total + marks[i]
+    }
+    document.getElementById("container").innerHTML = "total = " + total +"<br>";
+    var average = total / marks.length;
+    document.getElementById("container").innerHTML += "average = " + average ;
+
+
+
+	
+</script>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>practice</title>
+</head>
+<style>
+	#container{
+		width: 300px;
+		height: 300px;
+		border: 1px solid black;
+	}
+</style>
+<body>
+	<div id="container"></div>
+	<script>
+		array1 = [
+		          [1,2,4,3],
+		          [4,3,1,2],
+		          [2,4,3,1],
+		          [3,1,2,4]
+		         ];
+
+		         // i,j = i,j
+		         // i,j = (row.length-1) - i, (column.length-1) - j;
+		         // 3,3 = (3-3)0,(3-3)0;
+		         // 3,2 = 0(3-3),1(3-2)
+		         // 3,1 = 0,2
+		         // 3,0 = 0,3
+
+
+		         // [
+		         // 	["0,0","0,1","0,2","0,3"]
+		         // 	["1,0","1,1","1,2","1,3"]
+		         // 	["2,0","2,1","2,2","2,3"]
+		         // 	["3,0","3,1","3,2","3,3"]
+		         // ]
+
+// start from last row, last column...
+// 	rowIndex = arr1.length - 1;
+// 	columnIndex = arr1[rowIndex].length - 1;
+
+// 	arr1[rowIndex][columnIndex]
+
+
+// end with first row, first colum....
+var newArray = [[],[],[],[]];
+var i,j;
+		for(i = array1.length - 1; i >= 0; i--){
+			innerArray = array1[i];
+
+			for(j = innerArray.length-1; j >= 0; j--){
+				// console.log(innerArray[j]);
+				 newArray[(array1.length-1) - i][(innerArray.length-1) - j] = innerArray[j];
+			}
+		}
+	</script>
+	
+</body>
+</html>

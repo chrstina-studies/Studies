@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        *{
+			box-sizing: border-box;
+			margin: 0px;
+			padding: 0px;
+			border: 0px;
+		}
+		#container{
+			width: 500px;
+			height: 500px;
+			border: 2px solid black;
+		}
+		#container1{
+			height: 750px;
+			width: 700px;
+			border: 2px solid red;
+		}
+		#text-box{
+			height: 30px;
+			margin-left: 30px;
+			width: 200px;
+			border: 1px solid black;
+			font-size: 15px;
+		}
+		.button{
+			width: 100px;
+			background-color: #f8f8f8; 
+			height: 30px;
+			margin-left: 30px;
+			font-size: 15px;
+			margin-top: 20px; 
+		}
+
+	</style>
+    </style>
+    <meta charset="UTF-8">
+    <title>Star pattern</title>
+</head>
+
+<body style="display: flex; flex-direction: row;">
+    <div id="container"></div>
+    <div id="container1">
+        <input type="text" id="text-box" placeholder="value">
+        <input type="button" onclick="showTable()" value="enter" class="button"><br>
+    </div>
+
+    <script>
+    // for (i = 0; i < 10; i++) {
+    //     for (j = 0; j <= i; j++) {
+    //         document.getElementById("container").innerHTML += "*";
+    //         if (i === j) {
+    //             document.getElementById("container").innerHTML += "<br>";
+    //         }
+    //     }
+    // }
+    var length = 7;
+    while(length % 2 != 0){
+    	for(i = 0; 1 < length; i++){
+    		document.getElementById('container').innerHTML += "*";
+    		
+    	}
+    }
+
+   function showTable() {
+   	alert("im here");
+   	var container1 = document.getElementById('container1');
+   	 var value = document.querySelector("#text-box").value;
+	    // for (i = 1; i <= 10; i++) {
+	    //     container1.innerHTML += value +"*" + i + "=" + (value * i)+"<br>";
+	    // }
+	    var i = 1;
+	    while(im <= 10){
+	    	container1.innerHTML += value + "*" + i + "=" + (value * i)+ "<br>";
+	    	i++;
+	    }
+   }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.tableitem:nth-child(odd){
+			background-color: grey;
+		}
+		.tableitem:nth-child(even){
+			background-color: yellow;
+		}
+	</style>
+	<script src="js/multiplication.js"></script>
+
+</head>
+<body>
+   
+<div id="container" style="height: 600px; width: 100%; background-color: white;">
+	<input id="tableinput" type="text" value="5" placeholder="Enter the table num">
+	<input type="button" value="print table" onclick="printTable();">
+	<div id="printarea">
+		
+	</div>
+
+</div>
+<input type="button" value="red" onclick="changeColor('red');">
+<input type="button" value="green" onclick="changeColor('green');">
+<input type="button" value="blue" onclick="changeColor('blue');">
+<input type="button" value="yellow" onclick="changeColor('yellow');">
+	
+</body>
+</html>

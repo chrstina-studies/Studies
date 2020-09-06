@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calender</title>
+</head>
+<body>
+	<div class="container">
+        <div class="c-header">
+            <div class="days sun">Sun</div>
+            <div class="days">Mon</div>
+            <div class="days">Tue</div>
+            <div class="days">Wed</div>
+            <div class="days">Thu</div>
+            <div class="days">Fri</div>
+            <div class="days sat">Sat</div>
+        </div>
+        <div id="c-body" class="c-body"></div>
+    </div>
+
+    <script>
+    
+		var startDay = 4;
+		var noDaysInAMonth = 31;
+		var noWeekDays = 7;
+		var weekDayPtr = startDay-1;
+		var emptyDivs = weekDayPtr;
+		var div;
+
+		// adding empty divs
+			for(i = 0; i < weekDayPtr; i++){
+            	div = document.createElement('div');
+               	div.style.border="1px solid black"; 
+               	document.getElementById('c-body').appendChild(div);
+              }
+
+		// for(i = 0; i < 7; i++){
+            for(j = 1; j <= 31; j++){
+            	div = document.createElement('div');
+            	div.innerHTML = j;
+               	div.style.border="1px solid black";
+               	if(weekDayPtr == 0 || weekDayPtr == 6){
+               		div.style.color ="red"; 
+               	}
+               	document.getElementById('c-body').appendChild(div);
+               	weekDayPtr += 1;
+               	if(weekDayPtr > noWeekDays-1){
+               		weekDayPtr = 0;
+               	}
+              }
+
+            // }
+		
+		
+    </script>
+	
+</body>
+</html>

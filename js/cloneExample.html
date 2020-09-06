@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Clone Example</title>
+</head>
+<body>
+	<input type="button" id="myBtn" value="Duplicate Me" onclick="duplicateSelf('hiddenBtn')">
+
+	<input type="button" id="hiddenBtn" value="I was hiding" onclick="duplicateSelf(this)"style="display: none;">
+	
+
+	<div id="container" style="width: 800px;
+	height: 800px; background-color: beige;">	
+
+	</div>
+
+
+	<script>	
+		function duplicateSelf(id){
+			var el = document.getElementById(id);
+			var duplicateEl = el.cloneNode(true);
+			duplicateEl.id = "";
+			duplicateEl.style.display = "";
+			document.querySelector("#container").appendChild(duplicateEl);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style type="text/css">
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+    </style>
+    <meta charset="UTF-8">
+    <title>test-js</title>
+</head>
+
+<body>
+    <div id="container" style="width: 50vw; height: 80vh; border: 1px solid blue; display: flex;
+    flex-direction: column;">
+    </div>
+    	<div id="colors" style="border: 1px solid black; width: 300px; height: 300px; display: flex;"></div>
+    	<div style="width: 500px; height: 500px; border: 1px solid red;" id="multiply"></div>
+    
+</body>
+<script>
+var numbers = [1, 2, 3, 4, 5, 6, 9, 10, 12, 13];
+
+for (var i = 200; i <= 1000; i = i + 100) {
+    document.getElementById("container").innerHTML += i + "<br> ";
+}
+
+var marks = [55, 90, 48, 85, 80, 40];
+var total = 0;
+var failCount = 0;
+var grade = "pass";
+
+for (var i = 0; i < marks.length; i++) {
+    total = total + marks[i];
+
+    if (marks[i] < 35) {
+        failCount++;
+    }
+}
+var average = total / marks.length;
+
+if (failCount > 0) {
+    grade = "F";
+}else if(average >= 35 && average < 60){
+	grade = "B"
+}else if(average >= 60 && average < 80){
+	grade = "A"
+}else if(average >= 80){
+	grade = "O"
+}
+
+document.getElementById("container").innerHTML = "total = " + total + "<br>";
+document.getElementById("container").innerHTML += "average = " + average + "<br>";
+document.getElementById("container").innerHTML += "grade = " + grade;
+
+// var box =[
+//           ["red","green","blue"],
+//           ["blue","red","green"],
+//           ["green","blue","red"]
+//          ]
+// for(i = 0; i < box.length; i++){
+// 	document.getElementById("colors").innerHTML += box[i] + "<br>";
+//     var colors = box[i];
+//     for(j = 0; j < box[i]; i++){
+//     	document.getElementById("colors").innerHTML.style.backgroundColor = colors[j];
+//     }
+
+    
+// }
+
+
+
+
+ 
+
+</script>
+
+</html>

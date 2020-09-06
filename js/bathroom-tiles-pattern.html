@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tiles-pattern</title>
+</head>
+<style>
+	*{
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+	div{
+		border: .3px solid black;
+	}
+	.container{
+		width: 600px;
+		height: 600px;
+		display: grid;
+		grid-template-rows: repeat(auto-fill, minmax(50px,50px));
+		grid-template-columns: repeat(auto-fill, minmax(50px,50px));
+		grid-auto-flow: dense;
+		
+	}
+	.tiles{
+        background-color: yellow;
+        border: 1px solid black;
+        background-image: url(js/tiles-image.jpg);
+	}
+	.tiles:nth-child(1n), .tiles:nth-child(2n){
+		grid-area: span 2/ span 1;
+	}
+	.tiles:nth-child(3n){
+		grid-area: span 1 / span 2;
+	}
+	
+</style>
+<body>
+	<div class="container">
+		    <div class="tiles">1</div>
+		    <div class="tiles">2</div>
+		    <div class="tiles">3</div>
+		    <div class="tiles">4</div>
+		    <div class="tiles">5</div>
+		    <div class="tiles">6</div>
+		    <div class="tiles">7</div>
+		    <div class="tiles">8</div>
+		    <div class="tiles">9</div>
+		    <div class="tiles">10</div>
+		    <div class="tiles">11</div>
+		    <div class="tiles">12</div>
+		    <div class="tiles">13</div>
+		    <div class="tiles">14</div>
+		    <div class="tiles">15</div>
+		    <div class="tiles">16</div>
+		    <div class="tiles">17</div>
+		    <div class="tiles">18</div>
+		    <div class="tiles">19</div>
+		    <div class="tiles">20</div>
+		    <div class="tiles">21</div>
+		    <div class="tiles">22</div>
+		    <div class="tiles">23</div>
+		    <div class="tiles">24</div>
+		    <div class="tiles">25</div>
+		    <div class="tiles">26</div>
+		    <div class="tiles">27</div>
+		    <div class="tiles">28</div>
+		    <div class="tiles">29</div>
+		    <div class="tiles">30</div>
+		    <div class="tiles">31</div>
+		    <div class="tiles">32</div>
+		    <div class="tiles">33</div>
+		    <div class="tiles">34</div>
+		    <div class="tiles">35</div>
+		    <div class="tiles">36</div>
+		    <div class="tiles">37</div>
+		    <div class="tiles">38</div>
+		    <div class="tiles">39</div>
+		    <div class="tiles">40</div>
+		    <div class="tiles">41</div>
+		    <div class="tiles">42</div>
+		    <div class="tiles">43</div>
+		    <div class="tiles">44</div>
+		    <div class="tiles">45</div>
+		    <div class="tiles">46</div>
+		    <div class="tiles">47</div>
+		    <div class="tiles">48</div>
+		    <div class="tiles">49</div>
+		    <div class="tiles">50</div>
+	</div
+	
+</body>
+</html>

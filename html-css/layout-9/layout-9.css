@@ -1,0 +1,30 @@
+*{
+	box-sizing: border-box;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.tab1-selected{
+	--content-bg: red;
+}
+.tab2-selected{
+	--content-bg: violet;
+}
+.tab3-selected{
+	--content-bg: green;
+}
+
+#tab1content, #tab2content, #tab3content{
+	display: none;
+}
+
+.tab1-selected .tab-1, .tab2-selected .tab-2, .tab3-selected .tab-3{
+	background-color:  var(--content-bg);
+}
+
+.tab1-selected #tab1content, .tab2-selected #tab2content, .tab3-selected #tab3content{
+	display: flex;
+	height: 500px;
+	background-color: var(--content-bg);
+}

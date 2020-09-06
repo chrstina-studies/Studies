@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Multiplying two-dimentional array</title>
+</head>
+<style>
+#container{
+	width: 300px;
+	height: 300px;
+}
+</style>
+<body>
+	<div id="container"></div>
+	<script>
+		var arr1 = [
+                    [1,2,3],
+                    [9,6,3],
+                    [2,4,6]
+                   ];
+
+        for(i = 0; i < arr1.length; i++){
+
+        		for(j = 0; j <= 2; j++){
+        			document.getElementById('container').innerHTML +=
+        			 (arr1[i][j] * i);
+        		}
+        		document.getElementById('container').innerHTML += "</br>"
+
+        }
+	</script>
+</body>
+</html>
+
+
