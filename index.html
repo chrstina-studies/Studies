@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>Material CSS examples</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="styles/crispUI.css">
@@ -14,17 +15,19 @@
 <body>
 
     <div class="main">
+    	<div class="title">Get ready, we are launching soon .</div>
+    	<div class="tagline">Crisp UI</div>
         <div class="container">
             <div class="days">
                 <div id="days">100</div>
                 <div> days</div>
             </div>
             <div class="hrs">
-                <div>12</div>
+                <div id="hrs">12</div>
                 <div> hrs</div>
             </div>
             <div class="mins">
-                <div>59</div>
+                <div id="mins">59</div>
                 <div> min</div>
             </div>
             <div class="seconds">
@@ -47,11 +50,24 @@
     function calculateDiffDate() {
     	const date1 = new Date();
         const date2 = new Date("December 25, 2020 00:00:00");
-        const diffTime = Math.abs(date2 - date1);
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        const diffSeconds = Math.ceil(diffTime / (1000)%60);
-        document.querySelector('#seconds').innerText = diffSeconds;
+        var remMS = Math.abs(date2 - date1);
+
+        const diffDays = parseInt(remMS / (1000 * 60 * 60 * 24));
+        remMS = parseInt(remMS % (1000 * 60 * 60 * 24));
+        const diffHrs = parseInt(remMS / (1000 * 60 * 60));
+        remMS = parseInt(remMS % (1000 * 60 * 60));
+        const diffMins = parseInt(remMS / (1000 * 60));
+        remMS = parseInt(remMS % (1000 * 60 ));
+        const diffSecs = parseInt(remMS / 1000);
+        remMS = parseInt(remMS % 1000);
+
+
+
+        
         document.querySelector('#days').innerText = diffDays;
+        document.querySelector('#hrs').innerText = diffHrs;
+        document.querySelector('#mins').innerText = diffMins;
+        document.querySelector('#seconds').innerText = diffSecs;
         
     }
     </script>

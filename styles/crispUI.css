@@ -1,25 +1,27 @@
 body{
-	background-image: url(https://i.pinimg.com/originals/4c/52/f9/4c52f9eb7ff10b55e35ab24634db6a57.jpg);
+	background-image: url(https://cutewallpaper.org/21/hd-road-wallpaper/Mill-Road-Wallpaper-Hd-Download-Of-Beautiful-Road-Hd-Road-.jpg);
 	background-size: cover;
+	background-position: center;
+	font-family: 'Exo 2', sans-serif;
 }
 
 .main{
-	border:1px solid yellow;
 	display: grid;
 	align-items: center;
 	justify-items:center;
 	height: 100vh;
+	align-content: flex-end;
+	padding-bottom: 15px;
 }
 
 .container{
 	display: flex;
 	font-size: 50px;
 	padding: 20px;
-	font-family: 'Anton', sans-serif;
-	width: 900px;
+	width: 60%;
 	letter-spacing: 5px;
 	color: #FFFFFF;
-	text-shadow: 3px 3px 3px rgba(0,0,0,0.8);
+	text-shadow: 0px 0px 2px rgba(0,0,0,0.9);
 	height: 100%;
 	flex-direction: row;
 	align-items: center;
@@ -30,10 +32,25 @@ body{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/*border:1px solid red;*/
+}
+.tagline{
+	display: flex;
+	flex-basis: 400px;
+	min-width: 400px;
+	height: 200px;
+	align-items: center;
+	justify-content: center;
+	font-size: 70px;
+	color: white;
+	text-shadow: 0px 0px 5px rgba(0,0,0,1);
 }
 
 
 .days div:last-child,.hrs div:last-child,.mins div:last-child,.seconds div:last-child{
 	font-size: 20px;
+}
+.title{
+   color: white;
+   letter-spacing: 3px;
+   text-shadow: 0px 0px 3px rgba(0,0,0,1);
 }
