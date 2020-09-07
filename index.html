@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <title>Material CSS examples</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="styles/crispUI.css">
 </head>
+
 <body>
-	<h1 style="color:#8A2BE2; display: flex; align-item:center; justify-content:center;">Crisp UI is on making!</h1>
-	
+
+    <div class="main">
+        <div class="container">
+            <div class="days">
+                <div id="days">100</div>
+                <div> days</div>
+            </div>
+            <div class="hrs">
+                <div>12</div>
+                <div> hrs</div>
+            </div>
+            <div class="mins">
+                <div>59</div>
+                <div> min</div>
+            </div>
+            <div class="seconds">
+                <div id="seconds">40</div>
+                <div>secs</div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function(event) {
+        readySetGo();
+    });
+
+    function readySetGo() {
+        console.log(document.querySelector('.container'));
+        // calculateDiffDate();
+        setInterval(calculateDiffDate, 1000);
+
+    }
+    function calculateDiffDate() {
+    	const date1 = new Date();
+        const date2 = new Date("December 25, 2020 00:00:00");
+        const diffTime = Math.abs(date2 - date1);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        const diffSeconds = Math.ceil(diffTime / (1000)%60);
+        document.querySelector('#seconds').innerText = diffSeconds;
+        document.querySelector('#days').innerText = diffDays;
+        
+    }
+    </script>
 </body>
+
 </html>

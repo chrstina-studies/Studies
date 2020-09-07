@@ -1,0 +1,39 @@
+body{
+	background-image: url(https://i.pinimg.com/originals/4c/52/f9/4c52f9eb7ff10b55e35ab24634db6a57.jpg);
+	background-size: cover;
+}
+
+.main{
+	border:1px solid yellow;
+	display: grid;
+	align-items: center;
+	justify-items:center;
+	height: 100vh;
+}
+
+.container{
+	display: flex;
+	font-size: 50px;
+	padding: 20px;
+	font-family: 'Anton', sans-serif;
+	width: 900px;
+	letter-spacing: 5px;
+	color: #FFFFFF;
+	text-shadow: 3px 3px 3px rgba(0,0,0,0.8);
+	height: 100%;
+	flex-direction: row;
+	align-items: center;
+}
+
+.days,.hrs,.mins,.seconds{
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/*border:1px solid red;*/
+}
+
+
+.days div:last-child,.hrs div:last-child,.mins div:last-child,.seconds div:last-child{
+	font-size: 20px;
+}
